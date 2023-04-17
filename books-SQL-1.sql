@@ -45,3 +45,17 @@ SELECT COUNT(*) AS total_books FROM books;
 SELECT AVG(price) FROM books;
 SELECT AVG(price) FROM books WHERE genre = 'Fantasy';
 SELECT AVG(price) AS penguin_average_price FROM books WHERE publisher = 'Penguin';
+
+-- SUM
+SELECT SUM(price) FROM books;
+SELECT SUM(price) as fantasy_total_price FROM books WHERE genre = 'Fantasy';
+
+-- MIN
+SELECT MIN(price) FROM books;
+SELECT MIN(price) AS lowest_price FROM books;
+SELECT MIN(price) AS lowest_price_from_penguin FROM books WHERE publisher = 'Penguin';
+
+-- MAX
+SELECT MAX(price) FROM books;
+SELECT MAX(price) AS highest_price FROM books;
+SELECT MAX(price) AS highest_price_from_penguin FROM books WHERE publisher = 'Harper Collins';
